@@ -1,3 +1,5 @@
+# 创建
+
 `pnpm create tauri-app`
 
     feel-tauri-solid-restructure
@@ -7,6 +9,8 @@
     TypeScript
 
 `ncu -i` update `package.json`
+
+## fe
 
 `src` rename `src-fe`
 
@@ -21,6 +25,14 @@ modify `vite.config.ts`
 modify `src-fe\index.html`
 
     /src/ -> /
+
+### 测试
+
+`pnpm dev`
+
+`pnpm build`
+
+## tauri
 
 modify `.gitignore`
 
@@ -47,8 +59,6 @@ modify `Cargo.toml` add the following content
     name = "feel-tauri-solid-restructure"
     path = "src-tauri/main.rs"
 
-reload vs code
-
 `build.rs` move to `src-tauri\build.rs`
 
 modify `Cargo.toml` add the following content
@@ -61,5 +71,11 @@ modify `tauri.conf.json`
 
     `tauri.conf.json > build > distDir`: "../dist" -> "./dist",
     `tauri.conf.json > tauri > bundle > identifier`
+
+reload vs code
+
+### 测试
+
+`pnpm tauri dev`
 
 `pnpm tauri build`

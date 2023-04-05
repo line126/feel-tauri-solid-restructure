@@ -2,8 +2,8 @@
   "build": {
     "beforeDevCommand": "pnpm dev",
     "beforeBuildCommand": "pnpm build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist",
+    "devPath": "http://localhost:30405",
+    "distDir": "./dist",
     "withGlobalTauri": false
   },
   "package": {
@@ -27,7 +27,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.tauri.build",
       "targets": "all"
     },
     "security": {
