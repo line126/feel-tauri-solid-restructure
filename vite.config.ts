@@ -23,8 +23,19 @@ export default defineConfig(async () => ({
     minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG,
+    /**
+     * 默认： dist
+     * 相对于 项目根目录
+     */
     outDir: '../dist',
   },
   root: 'src-fe',
+  /**
+   * 默认： "public"
+   * 该值可以是文件系统的绝对路径，也可以是相对于项目根目录的相对路径。
+   *
+   * 默认是 <root>/public
+   * 因为修改了 root dir 所以 publicDir 也需要修改
+   */
   publicDir: '../public',
 }));
