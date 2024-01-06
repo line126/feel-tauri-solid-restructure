@@ -1,24 +1,21 @@
 {
   "name": "feel-tauri-solid-restructure",
   "version": "0.0.0",
-  "description": "",
-  "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "tauri": "tauri"
-  },
   "license": "MIT",
+  "scripts": {
+    "dev": "vite --config src-fe/vite.config.ts",
+    "build": "tsc -p src-fe && vite build --config src-fe/vite.config.ts",
+    "preview": "vite preview --config src-fe/vite.config.ts"
+  },
   "dependencies": {
-    "solid-js": "^1.7.2",
-    "@tauri-apps/api": "^1.2.0"
+    "solid-js": "^1.8.8",
+    "@tauri-apps/api": "^1.5.3"
   },
   "devDependencies": {
-    "@types/node": "^18.15.11",
-    "typescript": "^5.0.3",
-    "vite": "^4.2.1",
-    "vite-plugin-solid": "^2.7.0",
-    "@tauri-apps/cli": "^1.2.3"
+    "@types/node": "^20.10.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vite-plugin-solid": "^2.8.0",
+    "@tauri-apps/cli": "^1.5.9"
   }
 }

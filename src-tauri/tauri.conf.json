@@ -1,9 +1,10 @@
 {
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeDevCommand": "pnpm dev",
-    "beforeBuildCommand": "pnpm build",
+    "beforeBuildCommand": "pnpm run build",
+    "beforeDevCommand": "pnpm run dev",
     "devPath": "http://localhost:30405",
-    "distDir": "./dist",
+    "distDir": "../src-fe/dist",
     "withGlobalTauri": false
   },
   "package": {
